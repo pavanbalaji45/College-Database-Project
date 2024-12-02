@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Database</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            padding-top: 50px; /* Ensures content doesn't get hidden behind the fixed navbar */
+        }
+
+        /* Navbar Styling */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px;
+            z-index: 1000; /* Makes sure the navbar stays above other content */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for separation */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff6347; /* Tomato color */
+            transform: scale(1.1); /* Slightly enlarge the link on hover */
+        }
+
+        /* Home Page Content Styling */
+        .home-container {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .home-container h1 {
+            font-size: 3em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .home-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px; /* Rounded corners for the image */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .home-image:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+
+        /* Call to Action Button */
+        .cta-button {
+            background-color: #ff6347; /* Tomato color */
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4500; /* Darker tomato color */
+            transform: scale(1.05);
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #ff6347;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('manage_students') }}">Students</a></li>
+            <li><a href="{{ url_for('manage_instructors') }}">Instructors</a></li>
+            <li><a href="{{ url_for('manage_courses') }}">Courses</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Page Content -->
+    <div class="home-container">
+        <h1>Welcome to the College Database!</h1>
+        <img src="https://cdn.pixabay.com/photo/2021/10/11/04/08/university-6699377_1280.jpg" alt="College Image" class="home-image">
+        <br>
+        <a href="{{ url_for('manage_students') }}" class="cta-button">Manage Students</a>
+    </div>
+<br>
+<br>
+<br>
+<br>
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 College Database | <a href="#">Privacy Policy</a> | <a href="/about">About  Us</a></p>
+    </footer>
+</body>
+</html>
