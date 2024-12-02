@@ -20,29 +20,8 @@ Flask: Python web framework for handling routing and application logic.
 PostgreSQL (via pgAdmin): Relational database to store data for students, instructors, and courses.
 psycopg2: Python library to interact with the PostgreSQL database.
 
-/college-database
-│
-├── /templates              # HTML templates
-│   ├── home.html           # Home page
-│   ├── about.html          # About page
-│   ├── instructors.html    # Instructors management page
-│   ├── students.html       # Students management page
-│   └── courses.html        # Courses management page
-│
-├── app.py                  # Flask application
-└── requirements.txt        # Python dependencies
+![image](https://github.com/user-attachments/assets/c97d9983-e6bc-4fb3-98ad-36d7b7e85a42)
 
 
-Routes
-Home: / - Displays the home page.
-About: /about - Displays the about page.
-Instructors: /instructors - Displays and allows CRUD operations for instructors.
-Students: /students - Displays and allows CRUD operations for students.
-Courses: /courses - Displays and allows CRUD operations for courses.
-Enroll: /enroll - Allows enrolling students in courses.
-Screenshots
 
-Future Enhancements
-Implement user authentication for different roles (e.g., Admin, Instructor, Student).
-Improve the UI with frameworks like Bootstrap or Tailwind CSS.
-Add more features like grade management, attendance tracking, etc.
+![image](https://github.com/user-attachments/assets/9d106fef-5c13-44ad-abdc-edcf2c17fe34)
